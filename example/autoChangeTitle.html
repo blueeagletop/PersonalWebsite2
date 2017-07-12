@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>autoChangeTitle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="text-align:center">
+        <h1>第负七套眼保健操表：（标题自动变换）</h1> 
+        <h1>(→_→) (↑_↑) (←_←) (↓_↓)</h1>
+        <h1>(←_←) (→_←) (↑_↓) (↓_↑)</h1>
+        <h1>(↑_↓) (←_→) (↓_↑) (→_←)</h1>
+        <h1>(←_→) (↓_↑) (→_←) (↑_↓)</h1>
+    </body>
+</html>
+<script>
+// 标题动态变换
+    var step = 0;
+    var _title = document.title; //获取网页标题  
+    var space = '';
+    for (var i = 0; i <= _title.length; i++)
+        space += '　'; //根据标题长度生产相应的空字符  
+    function flash_title() //核心函数  
+    {
+        step++
+        if (step == 10) {
+            step = 1
+        }
+        if (step == 9) {
+            document.title = "(→_←) (↑_↓) 三四";
+        }
+        if (step == 8) {
+            document.title = "(←_→) (↓_↑) 四二"
+        }
+        if (step == 7) {
+            document.title = "(↓_↑) (→_←) 三四"
+        }
+        if (step == 6) {
+            document.title = "(↑_↓) (↓_↑) 三二"
+        }
+        if (step == 5) {
+            document.title = "(↑_↓) (↓_↑) 三四"
+        }
+        if (step == 4) {
+            document.title = " (←_←) (→_←) 二二"
+        }
+        if (step == 3) {
+            document.title = "(←_←) (↓_↓) 三四"
+        }
+        if (step == 2) {
+            document.title = "(→_→)(↑_↑) 一二"
+        }
+        if (step == 1) {
+            document.title = "第负七套眼保健操现在开始"
+        }
+        setTimeout("flash_title()", 2000);
+    }
+    flash_title();
+</script>

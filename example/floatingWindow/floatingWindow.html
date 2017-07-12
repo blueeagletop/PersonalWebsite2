@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>浮窗广告展示</title>
+        <style type="text/css">
+body {text-align: center;
+}
+a:link { text-decoration: none;font-size: 15px; line-height: 20px;}
+</style>  
+    </head>
+    <body>
+        <h3>浮窗广告展示</h3>
+        <DIV id=img1 style="Z-INDEX: 100; LEFT: 2px; WIDTH: 250px; POSITION: absolute; TOP: 43px; HEIGHT: 61px;
+             visibility: visible;"><a href="#" target="_blank">浮窗广告展示<img src="吉他.jpg" width="207" height="138" border="0"></a>
+        </DIV>
+        <SCRIPT>
+            var xPos = window.screen.availWidth / 2;
+            var yPos = window.screen.availHeight / 3;
+            var step = 2;
+            var delay = 30;
+            var height = 0;
+            var Hoffset = 0;
+            var Woffset = 0;
+            var yon = 0;
+            var xon = 0;
+            var pause = true;
+            var interval;
+            img1.style.top = yPos;
+            function changePos()
+            {
+                width = document.body.clientWidth;
+                height = document.body.clientHeight;
+                Hoffset = img1.offsetHeight;
+                Woffset = img1.offsetWidth;
+                img1.style.left = xPos + document.body.scrollLeft;
+                img1.style.top = yPos + document.body.scrollTop;
+                if (yon)
+                {
+                    yPos = yPos + step;
+                } else
+                {
+                    yPos = yPos - step;
+                }
+                if (yPos < 0)
+                {
+                    yon = 1;
+                    yPos = 0;
+                }
+                if (yPos >= (height - Hoffset))
+                {
+                    yon = 0;
+                    yPos = (height - Hoffset);
+                }
+                if (xon)
+                {
+                    xPos = xPos + step;
+                } else
+                {
+                    xPos = xPos - step;
+                }
+                if (xPos < 0)
+                {
+                    xon = 1;
+                    xPos = 0;
+                }
+                if (xPos >= (width - Woffset))
+                {
+                    xon = 0;
+                    xPos = (width - Woffset);
+                }
+            }
+
+            function start()
+            {
+                img1.visibility = "visible";
+                interval = setInterval('changePos()', delay);
+            }
+            function pause_resume()
+            {
+                if (pause)
+                {
+                    clearInterval(interval);
+                    pause = false;
+                } else
+                {
+                    interval = setInterval('changePos()', delay);
+                    pause = true;
+                }
+            }
+            start();
+                    </SCRIPT>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="test.js"></script>
+<link href="test.css" rel="stylesheet" type="text/css" />
+<title>test</title>
+</head>
+<body onLoad="dd()" style=" text-align:center;">
+<div id="mottoWord" style="margin:0px auto; height:500px;line-height:500px;">
+<div id="mottoWord0" style=" width:300px; line-height:200px; height:200px; color:#F8B912; background-color:#46B9B4; border:2px #F8B912 solid;">
+这是第一个div
+</div>
+<div id="mottoWord1" style=" width:300px;line-height:200px; height:200px; color:#9ADE81; background-color:#C98DD8; border:2px #9ADE81 solid;">
+这是第二个div
+</div>
+<div id="mottoWord2" style=" width:300px;line-height:200px; height:200px; color:#FFFFFF; background-color:#BBBBB1; border:2px #9ADE81 solid;">
+这是第三个div
+</div>
+<script language="javascript">
+<!--隐藏图层-->
+var divId=new Array();
+var divNum_b=3;
+for(i=1;i<divNum_b;i++){
+	divId[i]="mottoWord"+i;
+	hides(divId[i]);
+}
+</script>
+</div>
+</body>
+</html>

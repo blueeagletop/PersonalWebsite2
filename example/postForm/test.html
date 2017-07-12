@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">  
+<title>This is a simple HTML form!</title>  
+</head>  
+<body>  
+    <form action="testPHP.php" method="POST">  
+       名字：<input type="text" name="username"><br/><br/>    
+       留言类型 <br/>  
+       <select name="products[]" size=5 multiple>  
+        <option value="紧急">紧急</option>  
+        <option value="闲聊">闲聊</option>  
+        <option value="建议">建议</option>  
+        <option value="调侃">调侃</option>  
+        <option value="请教">请教</option>  
+      </select><br /><br/>  
+       留言：<br />  
+       <textarea name="message" rows="5" cols="40"></textarea><br/> <br/> 
+       <input type="submit" value="提 交">  
+    </form>  
+</body>  
+</html> 
